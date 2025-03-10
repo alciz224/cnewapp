@@ -4,9 +4,8 @@ import viteLogo from '/vite.svg'
 
 import './App.css'
 import React from 'react'
-import { BrowserRouter, RouterProvider } from 'react-router'
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router'
 
-import { createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
@@ -15,8 +14,13 @@ import PrivatePage from "./pages/PrivatePage";
 
 const router = createBrowserRouter([
   {
-    path: "login",
-    element: <Login/>
+    element: <PrivateRoutes/>,
+    children: [
+      {
+        path: '/',
+        element: <PrivatePage/>
+      }
+    ]
   },
   {
     path: "register",
