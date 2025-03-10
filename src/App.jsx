@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 
 import './App.css'
 import React from 'react'
-import { RouterProvider } from 'react-router-dom'
+import { BrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
@@ -40,7 +40,9 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
+    <BrowserRouter>
     <RouterProvider router={router}/>
+    </BrowserRouter>
   )
 }
 
