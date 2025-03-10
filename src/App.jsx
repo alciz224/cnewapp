@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 
 import './App.css'
 import React from 'react'
-import { BrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, RouterProvider } from 'react-router'
 
 import { createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
